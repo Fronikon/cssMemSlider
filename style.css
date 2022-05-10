@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mem_slider {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+}
+
+.mems {
+  display: flex;
+  
+  width: 100%;
+  height: 90%;
+
+  overflow-x: auto;
+}
+
+.mem {
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  margin-right: 10%;
+  padding: 1rem;
+
+  font-size: 40px;
+  
+  background-color: red;
+}
+
+.mem:last-child{
+  margin-right: 0;
+}
+
+.mem_img {
+  width: 80%;
+  height: 80%;
+}
+
+img {
+  object-fit: contain;
+
+  width: 100%;
+  height: 100%;
+}
