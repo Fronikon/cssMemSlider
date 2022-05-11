@@ -3,19 +3,33 @@
 }
 
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100vh;
+
   margin: 0;
+
+  color: white;
+  font-size: 1.5rem;
+
+  background-color: #25282a;
 }
 
 .mem_slider {
-  margin: 0 auto;
-
   width: 80%;
   max-width: 100%;
 }
 
+.mem_slider input {
+  width: 0;
+  height: 0;
+}
+
 .mems {
   width: 100%;
-  overflow: hidden;
+  /* overflow: hidden; */
   height: 80vh;
 }
 
@@ -27,24 +41,10 @@ body {
   width: 100%;
 }
 
-/* .mem {
-  width: 100%;
-  height: 100%;
-  
-  font-size: 3rem;
-  
-  background-color: red;
-} */
-
 .mems_description_inner {
   display: flex;
   width: 100%;
   height: 20%;
-}
-
-.mems_controls {
-  display: flex;
-  background-color: white;
 }
 
 .mem_description {
@@ -53,16 +53,32 @@ body {
   margin: 0;
 }
 
+.mems .overflow {
+  width: 100%;
+  height: 80%;
+
+  margin: 0 0 1rem 0;
+
+  box-shadow: 0 0.4rem 0 rgba(0, 0, 0, 0.452);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
 .mems_img_inner {
   display: flex;
+
   width: 400%;
-  height: 80%;
+  height: 100%;
+
+  transition: margin-left 1s;
+  background-color: #454749;
 }
 
 .mem_img {
   width: 100%;
   height: 100%;
-  background-color: blue;
+
+  background-color: inherit;
 }
 
 .mem_img img {
@@ -70,6 +86,59 @@ body {
 
   width: 100%;
   height: 100%;
+}
+
+.mems_controls {
+  display: flex;
+  gap: 0.5rem;
+  background-color: #25282a;
+}
+
+.mems_controls label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
+.mems_controls label label {
+  background-color: #75abfa;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+}
+
+.mems_controls label:hover {
+  cursor: pointer;
+}
+
+.mems_controls label:hover label {
+  background-color: white;
+  border-color: white;
+}
+
+/* .mems_controls label {
+  background-color: inherit;
+  border: 0.1rem solid white;
+} */
+
+#mem-1:checked ~ .mems label:nth-child(1) > label {
+  background-color: inherit;
+  border: 0.1rem solid white;
+}
+#mem-2:checked ~ .mems label:nth-child(2) > label {
+  background-color: inherit;
+  border: 0.1rem solid white;
+}
+#mem-3:checked ~ .mems label:nth-child(3) > label {
+  background-color: inherit;
+  border: 0.1rem solid white;
+}
+#mem-4:checked ~ .mems label:nth-child(4) > label {
+  background-color: inherit;
+  border: 0.1rem solid white;
 }
 
 #mem-1:checked ~ .mems .mems_img_inner, 
