@@ -43,3 +43,16 @@
   width: 100%;
   height: 100%;
 }
+
+#mem-1:checked ~ .mems .mems_inner {
+  margin-left: 0;
+}
+#mem-2:checked ~ .mems .mems_inner {
+  margin-left: -100%;
+}
+#mem-3:checked ~ .mems .mems_inner {
+  margin-left: -200%;
+}
+#mem-4:checked ~ .mems .mems_inner {
+  margin-left: -300%;
+}
