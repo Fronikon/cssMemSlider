@@ -1,40 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
 .mem_slider {
   margin: 0 auto;
 
   width: 80%;
   max-width: 100%;
-
-  text-align: center;
 }
 
 .mems {
   width: 100%;
   overflow: hidden;
-}
-
-.mems_inner {
-  display: flex;
-  width: 400%;
   height: 80vh;
 }
 
-.mem {
+.mems .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* .mem {
   width: 100%;
   height: 100%;
-
+  
   font-size: 3rem;
   
   background-color: red;
+} */
+
+.mems_description_inner {
+  display: flex;
+  width: 100%;
+  height: 20%;
+}
+
+.mems_controls {
+  display: flex;
+  background-color: white;
+}
+
+.mem_description {
+  flex-shrink: 0;
+  width: 100%;
+  margin: 0;
+}
+
+.mems_img_inner {
+  display: flex;
+  width: 400%;
+  height: 80%;
 }
 
 .mem_img {
   width: 100%;
-  height: 80%;
+  height: 100%;
   background-color: blue;
-}
-
-.mem_description {
-  margin: 0;
 }
 
 .mem_img img {
@@ -44,15 +72,19 @@
   height: 100%;
 }
 
-#mem-1:checked ~ .mems .mems_inner {
+#mem-1:checked ~ .mems .mems_img_inner, 
+#mem-1:checked ~ .mems .mems_description_inner {
   margin-left: 0;
 }
-#mem-2:checked ~ .mems .mems_inner {
+#mem-2:checked ~ .mems .mems_img_inner, 
+#mem-2:checked ~ .mems .mems_description_inner {
   margin-left: -100%;
 }
-#mem-3:checked ~ .mems .mems_inner {
+#mem-3:checked ~ .mems .mems_img_inner, 
+#mem-3:checked ~ .mems .mems_description_inner {
   margin-left: -200%;
 }
-#mem-4:checked ~ .mems .mems_inner {
+#mem-4:checked ~ .mems .mems_img_inner, 
+#mem-4:checked ~ .mems .mems_description_inner {
   margin-left: -300%;
 }
