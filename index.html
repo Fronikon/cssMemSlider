@@ -9,40 +9,44 @@
 </head>
 <body>
   <div class="mem_slider">
+    <input type="radio" id="mem-1" name="slider" checked>
+    <input type="radio" id="mem-2" name="slider">
+    <input type="radio" id="mem-3" name="slider">
+    <input type="radio" id="mem-4" name="slider">
+
     <div class="mems">
-      <div id="mem-1" class="mem">
-        <div class="mem_img">
-          <img src="./assets/images/mem-1.jpg" alt="mem-1">
+      <div class="mems_inner">
+        <div class="mem">
+          <div class="mem_img">
+            <img src="./assets/images/mem-1.jpg" alt="mem-1">
+          </div>
+          <p class="mem_description">Think about it.</p>
         </div>
-        <span class="mem_description">Think about it.</span>
-      </div>
-
-      <div id="mem-2" class="mem">
-        <div class="mem_img">
-          <img src="./assets/images/mem-2.jpg" alt="mem-1">
+        <div class="mem">
+          <div class="mem_img">
+            <img src="./assets/images/mem-2.jpg" alt="mem-1">
+          </div>
+          <p class="mem_description">When you write 10 lines of code without searching on Google.</p>
         </div>
-        <span class="mem_description">When you write 10 lines of code without searching on Google.</span>
-      </div>
-
-      <div id="mem-3" class="mem">
-        <div class="mem_img">
-          <img src="./assets/images/mem-3.jpg" alt="mem-1">
+        <div class="mem">
+          <div class="mem_img">
+            <img src="./assets/images/mem-3.jpg" alt="mem-1">
+          </div>
+          <p class="mem_description">It wasn't as bad before as it is now.</p>
         </div>
-        <span class="mem_description">It wasn't as bad before as it is now.</span>
-      </div>
-
-      <div id="mem-4" class="mem">
-        <div class="mem_img">
-          <img src="./assets/images/mem-4.jpg" alt="mem-1">
+        <div class="mem">
+          <div class="mem_img">
+            <img src="./assets/images/mem-4.jpg" alt="mem-1">
+          </div>
+          <p class="mem_description">Do you remember me?</p>
         </div>
-        <span class="mem_description">Do you remember me?</span>
       </div>
     </div>
-
-    <a class="slide" href="#mem-1">1</a>
-    <a class="slide" href="#mem-2">2</a>
-    <a class="slide" href="#mem-3">3</a>
-    <a class="slide" href="#mem-4">4</a>
+    
+    <label for="mem-1">1</label>
+    <label for="mem-2">2</label>
+    <label for="mem-3">3</label>
+    <label for="mem-4">4</label>
   </div>
 </body>
 </html>
