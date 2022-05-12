@@ -20,17 +20,19 @@ body {
 .mem_slider {
   width: 80%;
   max-width: 100%;
+  padding: 0 0 2rem 0;
+  height: 100%;
 }
 
 .mem_slider input {
   width: 0;
   height: 0;
+  margin: 0;
 }
 
 .mems {
   width: 100%;
-  /* overflow: hidden; */
-  height: 80vh;
+  height: 100%;
 }
 
 .mems .container {
@@ -41,10 +43,16 @@ body {
   width: 100%;
 }
 
+.mems_desription {
+  width: 100%;
+  line-height: 2.5rem;
+  overflow: hidden;
+}
+
 .mems_description_inner {
   display: flex;
   width: 100%;
-  height: 20%;
+  transition: margin-left 0.5s;
 }
 
 .mem_description {
@@ -70,7 +78,7 @@ body {
   width: 400%;
   height: 100%;
 
-  transition: margin-left 1s;
+  transition: margin-left 0.5s;
   background-color: #454749;
 }
 
@@ -91,15 +99,14 @@ body {
 .mems_controls {
   display: flex;
   gap: 0.5rem;
-  background-color: #25282a;
 }
 
 .mems_controls label {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 2rem;
-  height: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
 }
 
@@ -116,29 +123,24 @@ body {
 
 .mems_controls label:hover label {
   background-color: white;
-  border-color: white;
+}
+.mems_controls label:active label {
+  background-color: rgba(255, 255, 255, 0.705);
 }
 
-/* .mems_controls label {
-  background-color: inherit;
-  border: 0.1rem solid white;
-} */
-
-#mem-1:checked ~ .mems label:nth-child(1) > label {
-  background-color: inherit;
-  border: 0.1rem solid white;
-}
-#mem-2:checked ~ .mems label:nth-child(2) > label {
-  background-color: inherit;
-  border: 0.1rem solid white;
-}
-#mem-3:checked ~ .mems label:nth-child(3) > label {
-  background-color: inherit;
-  border: 0.1rem solid white;
-}
+#mem-1:checked ~ .mems label:nth-child(1) > label,
+#mem-2:checked ~ .mems label:nth-child(2) > label,
+#mem-3:checked ~ .mems label:nth-child(3) > label,
 #mem-4:checked ~ .mems label:nth-child(4) > label {
   background-color: inherit;
-  border: 0.1rem solid white;
+  border: 0.2rem solid #75abfa;
+}
+
+#mem-1:checked ~ .mems label:nth-child(1):hover > label,
+#mem-2:checked ~ .mems label:nth-child(2):hover > label,
+#mem-3:checked ~ .mems label:nth-child(3):hover > label,
+#mem-4:checked ~ .mems label:nth-child(4):hover > label {
+  border-color: white;
 }
 
 #mem-1:checked ~ .mems .mems_img_inner, 
@@ -156,4 +158,23 @@ body {
 #mem-4:checked ~ .mems .mems_img_inner, 
 #mem-4:checked ~ .mems .mems_description_inner {
   margin-left: -300%;
+}
+
+@media (max-width: 768.9px) {
+  .mem_slider {
+    width: 90%;
+  }
+
+  .mems .overflow {
+    height: 50%;
+  }
+
+  .mems .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .mems_controls {
+    margin: 0 0 1rem 0;
+  }
 }
